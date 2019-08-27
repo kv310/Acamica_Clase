@@ -1,0 +1,43 @@
+body {
+  margin: 50px auto;
+  background-color: #eee;
+}
+
+.grid-container {
+  background-color: black;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 50%;
+  grid-gap: 4px;
+}
+
+.grid-container > div {
+  background-color: #eee;
+  height: 200px;
+}
+
+.grid-container > div > p::selection {
+  background: auto;
+}
+
+.grid-container:hover {
+  cursor: pointer;
+}
+
+.grid-container > div > p {
+  font-family: sans-serif;
+  font-size: 4em;
+  position: relative;
+  text-align: center;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
